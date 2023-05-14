@@ -11,9 +11,89 @@
   <meta name="keywords" content="global, template, html, sass, jquery">
   <meta name="author" content="Zepheria">
   <link rel="stylesheet" href="assets/css/main.css">
+  <style>
+    .containerr {
+        position: relative;
+        height: 300px;
+        margin: 50px auto;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+    }
+
+    .cardd {
+        width: 180px;
+        height: 250px;
+        position: absolute;
+        top: 0;
+        right: 200px;
+        margin: -150px;
+        transform-style: preserve-3d;
+        transform-origin: right center;
+        transform: rotate(-25deg) translateZ(0px);
+        box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+        transition: all 0.3s ease;
+        border-radius: 10px;
+        z-index: 1;
+    }
+
+    .cardd:hover {
+        transform: rotate(-15deg) translateZ(30px);
+        box-shadow: 4px 4px 12px rgba(0,0,0,0.5);
+        border: 2px solid #555;
+        z-index: 999;
+    }
+
+    .cardd:hover img {
+        transform: scale(1.5);
+    }
+
+    .cardd img {
+        position: absolute;
+        top: 0; 
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .cardd:hover ~ .cardd img,
+    .cardd img:hover ~ .cardd img {
+        opacity: 0;
+    }
+
+    .cardd:nth-child(1){
+        transform: rotate(-20deg) translateZ(0px);
+        margin-right: -150px;
+    }
+    .cardd:nth-child(2){
+        transform: rotate(-5deg) translateZ(-20px);
+        margin-right: -100px;
+    }
+    .cardd:nth-child(3){
+        transform: rotate(5deg) translateZ(-40px);
+        margin-right: -50px;
+    }
+    .cardd:nth-child(4){
+        transform: rotate(20deg) translateZ(-60px);
+        margin-right: 0;
+    }
+
+    .containerr:hover .cardd {
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+    .containerr:hover .cardd:hover {
+      opacity: 1;
+      transform: scale(1.1);
+      z-index: 999;
+    }
+  </style>
 </head>
 <body>
-
+s
 <div class="device-notification">
   <a class="device-notification--logo" href="https://www.roblox.com/users/248566111/profile" target="_blank" rel="noopener noreferrer">
     <img src="assets/img/logo.png" alt="Zepheria">
@@ -90,7 +170,21 @@
                     </svg>
                   </span>
                 </a> -->
-                <img src="assets/img/about-visual.png" alt="About Me">
+                <!-- <img src="assets/img/about-visual.png" alt="About Me"> -->
+                <div class="containerr">
+                  <div class="cardd">
+                    <img src="assets/img/cl.png">
+                  </div>
+                  <div class="cardd">
+                    <img src="assets/img/lc.png">
+                  </div>
+                  <div class="cardd">
+                    <img src="assets/img/cl2.png">
+                  </div>
+                  <div class="cardd">
+                    <img src="assets/img/lc2.png">
+                  </div>
+                </div>
               </div>
               <div class="intro--options" style="text-align: left; font-size: 15px;">
                 <a>
@@ -206,7 +300,7 @@
                   <ul class="modal--options">
                     <li><a href="http://discordapp.com/users/584871070100750336/" target="_blank" rel="noopener noreferrer">Discord (Zepheria#5947)</a></li>
                     <li><a href="https://talent.roblox.com/creators/248566111" target="_blank" rel="noopener noreferrer">Talent Hub</a></li>
-                    <li><a href="mailto:ouremail@gmail.com">Email</a></li>
+                    <li><a href="mailto:zepheriacommissions@gmail.com">Email</a></li>
                   </ul>
                 </div>
               </div>
