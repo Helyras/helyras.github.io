@@ -5,7 +5,7 @@
   <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="assets/img/favicon-16x16.png" sizes="16x16" />
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Scripting & Turkish Localization">
   <meta name="keywords" content="global, template, html, sass, jquery">
@@ -18,6 +18,8 @@
         margin: 50px auto;
         transform-style: preserve-3d;
         perspective: 1000px;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .cardd {
@@ -34,6 +36,8 @@
         transition: all 0.3s ease;
         border-radius: 10px;
         z-index: 1;
+        flex: 1 0 50%;
+        padding: 10px;
     }
 
     .cardd:hover {
@@ -88,7 +92,39 @@
     .containerr:hover .cardd:hover {
       opacity: 1;
       transform: scale(1.1);
-      z-index: 999;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .intro--options {
+        font-size: 13px !important;
+        margin-top: 20px !important;
+      }
+      .intro--options2 {
+        font-size: 12px !important;
+        margin-top: -250px !important;
+      }
+      .intro {
+        font-size: 15px;
+      }
+      h1 {
+       font-size: 50px !important;
+      }
+      h2 {
+        font-size: 50px !important;
+        top: 80px !important;
+      }
+      .information-name {
+        font-size: 16px !important;
+      }
+      .information-email {
+        font-size: 16px !important;
+      }
+      .work-request--options {
+        margin-right: -180px !important;
+      }
+      .outer-nav {
+        margin-left: -40px;
+      }
     }
   </style>
 </head>
@@ -186,7 +222,7 @@
                   </div>
                 </div>
               </div>
-              <div class="intro--options" style="text-align: left; font-size: 15px;">
+              <div class="intro--options2" style="text-align: left; font-size: 15px;">
                 <a>
                   <h3>QuasarV3 (Candy Land Full Game)</h3>
                   <p>"There are not enough words to explain how amazing Zepheria is. I needed a scripter for my game Candy Land, and he did everything I asked him with no hesitation. We were together making the game for about a month, and I just want to say thank you, thank you, thank you!"</p>
