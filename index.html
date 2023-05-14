@@ -94,6 +94,12 @@
       transform: scale(1.1);
     }
 
+    @media only screen and (max-width: 420px) {
+      .work-request--options {
+        margin-right: -180px !important;
+      }
+    }
+
     @media only screen and (max-width: 768px) {
       .intro--options {
         font-size: 13px !important;
@@ -120,10 +126,14 @@
         font-size: 16px !important;
       }
       .work-request--options {
-        margin-right: -180px !important;
+        position: center !important;
       }
       .outer-nav {
         margin-left: -40px;
+      }
+      .header--cta {
+        display: inline-block !important;
+        margin-top: 50px;
       }
     }
   </style>
