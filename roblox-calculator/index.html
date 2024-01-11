@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+  <head><link rel="stylesheet" href="style.css"></head>
+
+  <h1>ROBLOX Tax Calculator</h1>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <div class="form__group">
+    <input type="number" class="form__input" id="input" placeholder="Robux Amount" required="" />
+  </div>
+
+
+  <label id = "output"> 0R$ </label>
+  <button onclick="calc()" class="button1" role="button">Calculate</button>
+
+  <script type="text/javascript">
+      function calc() {
+        let input = document.getElementById("input").value
+        document.getElementById('output').innerHTML = Math.floor(0.7 * input) + "R$"
+      }
+  </script>
+  
+
+ </body>
+</html>
